@@ -1,0 +1,81 @@
+
+** Control de torque del motor de induccion ** 
+
+** Maquina de induccion de 300 [W], 0.40231 [hp] **
+
+Voltaje nominal v_Srmsnom: 380 [V] 
+Corriente nominal i_Srmsnom (P/Vrms):0.78947 [A] 
+Magnitud de flujo nominal psi_Rmagnom (M*irms/sqrt(2)): 0.7927 [Wb vuelta] 
+Velocidad nominal w_Rnom: 361.283 [rad/s] 
+Torque nominal tau_Rnom (P/w_Rnom): 0.83037 [N m] 
+
+Parametros electricos: 
+Pares de polos n_p: 1 (2 polos)
+Resistencia de devanados de estator R_S: 15.6 [ohm]
+Resistencia de devanados de rotor R_R: 23.2 [ohm]
+Inductancia de devanados de estator L_S: 1.44 [H]
+Inductancia de devanados de rotor L_R: 1.5 [H]
+Inductancia mutua M: 1.42 [H]
+
+Parametros mecanicos: 
+Inercia del rotor: 0.000711 [kg m^2]
+Friccion del rotor: 0.00014 [ ]
+
+
+** Controlador PBC para control de torque **
+
+Amortiguamiento del subsistema electrico epsilon_KiS: 1 [ohm]
+Magnitud de flujo magnetico: 0.7927
+
+
+Magnitud del flujo deseado: 0.7927 (100% de valor nominal) 
+
+
+Perfil torque de referencia tau_Rref
+Perfil seleccionado: Polinomio 7mo orden
+Polinomio de 7mo orden 
+ Tiempo: 1 a 1.25
+ Posicion inicial: 0 Posicion final: 0.41519
+ Velocidad inicial: 0 Velocidad final: 0
+ Aceleracion inicial: 0 Aceleracion final: 0
+ Jerk inicial: 0 Jerk final: 0
+
+
+Valor deseado: 0.41519 [N m] (50% de valor nominal)
+
+
+Perfil torque de carga tau_L
+Perfil seleccionado: Polinomio 7mo orden
+Polinomio de 7mo orden 
+ Tiempo: 1 a 1.25
+ Posicion inicial: 0 Posicion final: 0.41519
+ Velocidad inicial: 0 Velocidad final: 0
+ Aceleracion inicial: 0 Aceleracion final: 0
+ Jerk inicial: 0 Jerk final: 0
+
+
+Valor deseado: 0.41519 [N m] (50% de valor nominal)
+
+
+
+** Mediciones de voltaje y corriente **
+
+Mediciones de voltaje: 
+Voltaje pico: 432.8207 (139.5% de valor nominal)
+Frecuencia principal: 87.858
+
+Mediciones de corriente: 
+Corriente pico: 0.56904 (88.28% de valor nominal)
+Frecuencia principal: 0.073215
+
+
+** Mediciones de voltaje y corriente **
+
+Mediciones de voltaje: 
+Voltaje pico: 432.8207 (139.5% de valor nominal)
+Frecuencia principal: 87.858
+
+Mediciones de corriente: 
+Corriente pico: 0.56904 (88.28% de valor nominal)
+Frecuencia principal: 0.073215
+

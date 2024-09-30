@@ -1,0 +1,49 @@
+
+% Jacobiano JP: 
+
+JP(1,1) = - lc2*sin(q1 + q2) - l1*sin(q1);
+JP(1,2) = lc1*sin(q1) - l1*sin(q1) - lc2*sin(q1 + q2);
+
+JP(2,1) = lc2*cos(q1 + q2) + l1*cos(q1);
+JP(2,2) = lc2*cos(q1 + q2) + l1*cos(q1) - lc1*cos(q1);
+
+JP(3,1) = 0;
+JP(3,2) = 0;
+
+
+% Derivada del Jacobiano dJP: 
+
+dJP(1,1) = - dq1*(lc2*cos(q1 + q2) + l1*cos(q1)) - dq2*lc2*cos(q1 + q2);
+dJP(1,2) = - dq1*(lc2*cos(q1 + q2) + l1*cos(q1) - lc1*cos(q1)) - dq2*lc2*cos(q1 + q2);
+
+dJP(2,1) = - dq1*(lc2*sin(q1 + q2) + l1*sin(q1)) - dq2*lc2*sin(q1 + q2);
+dJP(2,2) = - dq1*(lc2*sin(q1 + q2) + l1*sin(q1) - lc1*sin(q1)) - dq2*lc2*sin(q1 + q2);
+
+dJP(3,1) = 0;
+dJP(3,2) = 0;
+
+
+% Matriz de Inercia D: 
+
+D(1,1) = (d1*m1)/2 + (d2*m2)/2 + l1^2*m2 + lc1^2*m1 + lc2^2*m2 + 2*l1*lc2*m2*cos(q2);
+D(1,2) = lc2*m2*(lc2 + l1*cos(q2));
+
+D(2,1) = lc2*m2*(lc2 + l1*cos(q2));
+D(2,2) = (m2*(d2 + 2*lc2^2))/2;
+
+
+% Matriz de Coriollis C: 
+
+C(1,1) = 0;
+C(1,2) = -l1*lc2*m2*sin(q2)*(2*dq1 + dq2);
+
+C(2,1) = dq1*l1*lc2*m2*sin(q2);
+C(2,2) = 0;
+
+
+% Matriz de Gravedad G: 
+
+G(1,1) = l1*m2*cos(q1) + lc1*m1*cos(q1) + lc2*m2*cos(q1 + q2);
+
+G(2,1) = lc2*m2*cos(q1 + q2);
+
